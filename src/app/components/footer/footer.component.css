@@ -1,0 +1,41 @@
+.footer__container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	background-color: var(--bg-5);
+	margin-top: 1rem;
+}
+
+.footer__header {
+	padding: 1rem 0;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.footer__header>img {
+	width: 10rem;
+
+}
+
+.footer__content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 5%;
+	flex-wrap: wrap;
+}
+
+.footer__session>ul>li {
+	padding: .5rem;
+	color: white;
+}
+
+.footer {
+	padding: 3rem;
+	color: white;
+	text-align: center;
+}
+
+.footer>h4 {
+	font-weight: 400;
+}
