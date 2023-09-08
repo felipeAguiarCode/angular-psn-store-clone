@@ -1,0 +1,22 @@
+.product-option__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.product-option__container>h1 {
+	padding-bottom: 2rem;
+}
+
+
+.product-option__content {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.product-option__content>span>img {
+	width: 10rem;
+	border-radius: 10px;
+}
