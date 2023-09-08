@@ -1,34 +1,29 @@
-.card-pricing__container{
-	position: absolute;
-	bottom:0px;
-	left: 0;
-	display: flex;
+.card-pricing__container {
 	flex-direction: column;
 	width: 100%;
-	height: 70px;
-	background-color: rgba(0,0,0,0.8);
-	padding: 10px;
-	color: antiquewhite;
-	font-family: Calibri;
+	color: black;
 }
 
-.card-pricing__title{
-	margin-bottom: 3px;
+.card-pricing__value {
+	display: flex;
+	flex-direction: column;
 }
 
-.card-pricing__value{
+.card-pricing__value__console {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	align-items: center;
+	height: 30px;
 }
 
-.card-pricing__value__console{
-	display: flex;
-	flex-direction: row;
-}
-
-.card-pricing__value__console > span{
+.card-pricing__value__console>span {
 	font-weight: bolder;
-	color:aqua;
-	margin-right: 10px;
+	color: var(--c-promotion);
+	font-size: 2.5rem;
+	padding: 0 5px 0 0;
+}
+
+.card-pricing__value__console>p {
+	font-size: .8rem;
+	color: var(--c-secondary);
 }
