@@ -1,0 +1,14 @@
+.card-description__container {
+	width: 100%;
+	color: black;
+}
+
+.card-description__type {
+	font-size: .8rem;
+	color: var(--c-secondary);
+	text-decoration: none;
+}
+
+.card-description__title {
+	color: var(--c-primary);
+}
