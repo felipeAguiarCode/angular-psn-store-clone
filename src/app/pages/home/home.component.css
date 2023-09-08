@@ -1,10 +1,28 @@
-.home__container{
+.home__container {
 	width: 90%;
 	margin: auto;
-	padding-top: 50px;
 	display: flex;
-
 	justify-content: space-around;
 	align-items: baseline;
 	flex-wrap: wrap;
+	gap: 1.5rem;
+	flex-direction: column;
+	;
+}
+
+.home__container>h1 {
+	padding-top: 8rem;
+
+}
+
+.home__games {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.home__banner>img {
+	width: 100%;
+	padding: 2rem 0;
 }
