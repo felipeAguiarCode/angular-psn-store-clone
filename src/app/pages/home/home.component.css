@@ -7,18 +7,16 @@
 	flex-wrap: wrap;
 	gap: 1.5rem;
 	flex-direction: column;
-	;
 }
 
 .home__container>h1 {
 	padding-top: 8rem;
-
 }
 
 .home__games {
 	display: flex;
 	flex-direction: row;
-	gap: 2rem;
+	gap: 1rem;
 	flex-wrap: wrap;
 }
 

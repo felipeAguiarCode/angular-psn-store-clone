@@ -1,31 +1,34 @@
-<div class="home__container">
-	<app-card
-		gameCover="assets/bt-1.jpg"
-		gameLabel="DIGITAL"
-		gameType="DIGITAL | PS4"
-		gamePrice="R$ 129,99"
-	>
-	</app-card>
-	<app-card
-		gameCover="assets/bt-4.jpg"
-		gameLabel="EXCLUSIVE"
-		gameType="DISC | PS5"
-		gamePrice="R$ 269,99"
-	>
-	</app-card>
-	<app-card
-		gameCover="assets/ac-cover.jpg"
-		gameLabel="BEST OF YEAR"
-		gameType="DIGITAL | PS5"
-		gamePrice="R$ 369,99"
-		>
-	</app-card>
-	<app-card
-		gameCover="assets/bt-hardline.jpg"
-		gameLabel="NEW"
-		gameType="DIGITAL | PS3 PS4 PS5"
-		gamePrice="R$ 369,99"
-	>
-	</app-card>
-</div>
-
+<section class="home__container">
+	<h1 id="prevenda">Pré-venda</h1>
+	<div class="home__games">
+		<app-card *ngFor="let sale of listPreSale" gameCover="{{'assets/cover/'+sale.gameCover}}"
+			gameLabel="{{sale.gameLabel}}" gameType="{{sale.gameType}}" gamePrice="{{sale.gamePrice}}"
+			gameTitle="{{sale.gamePrice}}" gamePlatformTag="{{sale.gamePlatformTag}}">
+		</app-card>
+	</div>
+</section>
+<section class="home__container">
+	<h1 id="novosjogos">Novos jogos</h1>
+	<div class="home__games">
+		<app-card *ngFor="let newgame of listNewGames" gameCover="{{'assets/cover/'+newgame.gameCover}}"
+			gameLabel="{{newgame.gameLabel}}" gameType="{{newgame.gameType}}" gamePrice="{{newgame.gamePrice}}"
+			gameTitle="{{newgame.gamePrice}}" gamePlatformTag="{{newgame.gamePlatformTag}}">
+		</app-card>
+	</div>
+</section>
+<section class="home__container">
+	<h1 id="demonstracoes">Demonstrações</h1>
+	<div class="home__games">
+		<app-card *ngFor="let demo of listDemos" gameCover="{{'assets/cover/'+demo.gameCover}}"
+			gameLabel="{{demo.gameLabel}}" gameType="{{demo.gameType}}" gamePrice="{{demo.gamePrice}}"
+			gameTitle="{{demo.gamePrice}}" gamePlatformTag="{{demo.gamePlatformTag}}">
+		</app-card>
+	</div>
+</section>
+<section class="home__banner">
+	<img src="assets/bane.jpg" alt="" srcset="">\
+</section>
+<section class="home__container">
+	<app-product-option [listOptions]="listOptions"></app-product-option>
+</section>
+<app-footer></app-footer>
