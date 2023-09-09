@@ -1,17 +1,10 @@
 <a href="#" class="card__container">
-	<img
-		class="card__img"
-		[src]=[gameCover]
-		alt=""
-		srcset=""
-	>
-	<app-card-label
-		gameLabel="{{gameLabel}}"
-	>
-	</app-card-label>
-	<app-card-pricing
-		gameType="{{gameType}}"
-		gamePrice="{{gamePrice}}"
-	>
-	</app-card-pricing>
+	<img class="card__img" [src]=[gameCover] alt="" srcset="">
+	<div class="card__content">
+		<app-card-label gameLabel="{{gameLabel}}">
+		</app-card-label>
+		<app-card-description gameTitle="{{gameTitle}}" gameType="{{gameType}}"></app-card-description>
+		<app-card-pricing gamePlatformTag="{{gamePlatformTag}}" gamePrice="{{gamePrice}}">
+		</app-card-pricing>
+	</div>
 </a>
