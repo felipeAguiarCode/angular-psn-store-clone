@@ -1,0 +1,38 @@
+{
+  "API": [
+    {
+      "cover": "assets/bt-1.jpg",
+      "type": "DIGITAL",
+      "label": "DIGITAL | PS4",
+      "price": "R$ 129,99"
+    },
+    {
+      "cover": "assets/bt-4.jpg",
+      "type": "EXCLUSIVE",
+      "label": "DISC | PS5",
+      "price": "R$ 269,99"
+    },
+    {
+      "cover": "assets/ac-cover.jpg",
+      "type": "BEST OF YEAR",
+      "label": "DIGITAL | PS5",
+      "price": "R$ 369,99"
+    },
+    {
+      "cover": "assets/bt-hardline.jpg",
+      "type": "NEW",
+      "label": "DIGITAL | PS3 PS4 PS5",
+      "price": "R$ 369,99"
+    }
+  ],
+  "header": [
+    {
+      "novidades": "https://store.playstation.com/pt-br/pages/latest",
+      "colecoes": "https://store.playstation.com/pt-br/pages/collections",
+      "ofertas": "https://store.playstation.com/pt-br/pages/deals",
+      "ps5": "https://store.playstation.com/pt-br/pages/ps5",
+      "assinatura": "https://store.playstation.com/pt-br/pages/subscriptions",
+      "navegar": "https://store.playstation.com/pt-br/pages/browse"
+    }
+  ]
+}
