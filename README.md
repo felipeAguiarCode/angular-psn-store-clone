@@ -10,18 +10,27 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Utilizando API Rest Fake
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para simular o uso do `HttpClient`, precisamos de uma API REST, como o foco é o `HttpClient` não vamos nos preocupar em criar uma API REST, para isso podemos usar o `json-server`, que faz uma API REST fake, assim focaremos no `HttpClient`.
+Para mais detalhes sobre o `json-server`, podemos consultar seu github.
 
-## Running unit tests
+Para instalar o `json-server`, bastar executar o seguinte comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`npm install -g json-server`
 
-## Running end-to-end tests
+Dento do nosso projeto, vamos criar uma pasta chamada “data” dentro de "assets"
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`/src/assets/db`
 
-## Further help
+Agora crie um arquivo chamado db.json e jogue dentro da pasta “data” que acabamos de criar:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`/src/assets/data/db.json`
+
+Vamos abrir o arquivo `db.json` e incluir o seguinte json:
+
+`{ "API": [ { "cover": "assets/bt-1.jpg", "type": "DIGITAL", "label": "DIGITAL | PS4", "price": "R$ 129,99" }, { "cover": "assets/bt-4.jpg", "type": "EXCLUSIVE", "label": "DISC | PS5", "price": "R$ 269,99" }, { "cover": "assets/ac-cover.jpg", "type": "BEST OF YEAR", "label": "DIGITAL | PS5", "price": "R$ 369,99" }, { "cover": "assets/bt-hardline.jpg", "type": "NEW", "label": "DIGITAL | PS3 PS4 PS5", "price": "R$ 369,99" } ], "header": { { "novidades": "https://store.playstation.com/pt-br/pages/latest", "colecoes": "https://store.playstation.com/pt-br/pages/collections", "ofertas": "https://store.playstation.com/pt-br/pages/deals", "ps5": "https://store.playstation.com/pt-br/pages/ps5", "assinatura": "https://store.playstation.com/pt-br/pages/subscriptions", "navegar": "https://store.playstation.com/pt-br/pages/browse" } } }`
+
+Vamos rodar o `json-server` para simular nossa API REST, abra um novo terminal e na raiz do projeto execute o seguinte comando:
+
+`json-server --watch src/assets/data/db.jsono`
