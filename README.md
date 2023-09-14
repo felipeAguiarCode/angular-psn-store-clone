@@ -1,3 +1,6 @@
+# Mudanças feita por tardelliaraujo:
+### Organizei os arquivos de home em uma iteração com ngFor e acrescentei imagens e dados de jogos atuais da plataforma playstationStore, bem como meus contatos de Linkedin e Github.
+
 # Store
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
