@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { GameService } from 'src/app/services/game.service';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -12,13 +14,29 @@ export class CardComponent implements OnInit {
 	@Input()
 	gameLabel:string=""
 	@Input()
-	gameType:string ="XPTO | PS4"
+	gameType:string =""
 	@Input()
-	gamePrice:string = "R$ 399,90"
+	gamePrice:string = ""
+	@Input()
+	id:string = ""
 
-  constructor() { }
+
+  constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
+	this.setValuesToComponent(this.id);
   }
+	setValuesToComponent(id: string) {
+		const result = this.gameService.getDataById(id);
+
+		if (result) {
+			this.gameCover = result.gameCover;
+			this.gameLabel = result.gameLabel;
+			this.gameType = result.gameType;
+			this.gamePrice = result.gamePrice
+		  } else {
+			console.error(`Artigo com ID ${id} não encontrado.`);
+		  }
+	}
 
 }
