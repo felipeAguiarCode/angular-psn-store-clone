@@ -1,4 +1,10 @@
 export type GameData = {
     id:number;
-    name:string
+    title:string;
+    developer:string;
+    thumbnail:string;
+    shortDescription:string;
+    platform:string;
+    genre:string
+    publisher:string;
 }

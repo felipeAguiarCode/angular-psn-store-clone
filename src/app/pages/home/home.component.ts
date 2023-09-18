@@ -8,7 +8,7 @@ import { GamesService } from 'src/app/services/games.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  itemsPerPage: number = 10;
+  itemsPerPage: number = 5;
   currentPage: number = 1;
 
   currentPageResults: GameData[] = [];
@@ -17,11 +17,9 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    let result;
     this.gameService.getAllGames();
     this.gameService.onApiCallComplete().subscribe(() => {
-      result = this.loadPage(1);
-      console.log(result)
+     this.loadPage(1);
     });
   }
 
@@ -30,6 +28,7 @@ export class HomeComponent implements OnInit {
     const endIndex = startIndex + this.itemsPerPage;
     this.currentPageResults = this.gameService.getAllResults().slice(startIndex, endIndex);
     this.currentPage = pageNumber;
+    console.log(this.currentPageResults)
     return this.currentPageResults;
   }
 
