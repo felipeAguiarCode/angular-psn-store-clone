@@ -42,13 +42,13 @@ export class HomeComponent implements OnInit {
   getPageNumbers(): Observable<number[]> {
     const totalPages = Math.ceil(this.totalGames / this.itemsPerPage);
     const currentPage = this.currentPage;
-    const itemsToShow = 5; // Quantidade de páginas a serem mostradas
+    const itemsToShow = 5; 
 
     let startPage = Math.max(1, currentPage - itemsToShow);
     let endPage = Math.min(totalPages, currentPage + itemsToShow);
 
     return range(startPage, endPage - startPage + 1).pipe(
-      toArray() // Converta o Observable em um array
+      toArray() 
     );
   }
 }

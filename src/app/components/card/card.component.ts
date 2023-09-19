@@ -15,6 +15,8 @@ export class CardComponent implements OnInit {
 	gameTitle:string ="XPTO | PS4"
 	@Input()
 	gameGenre:string = "R$ 399,90"
+	@Input()
+	gameId:string = '';
 
   constructor() { }
 

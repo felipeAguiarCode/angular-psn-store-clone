@@ -1,6 +1,7 @@
 <div class="home__container">
 	
 	<app-card *ngFor="let game of currentPageResults" 
+		gameId="{{game.id}}"
 		gameThumb="{{game.thumbnail}}" 
 		gamePlatform="{{game.platform}}"
 		gameTitle="{{game.title}}" 
