@@ -8,3 +8,10 @@
 	align-items: baseline;
 	flex-wrap: wrap;
 }
+
+.pagination__container{
+	position: absolute;
+	bottom: 300px;
+	display: flex;
+	justify-content: center;
+}

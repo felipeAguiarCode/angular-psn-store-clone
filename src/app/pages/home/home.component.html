@@ -1,11 +1,27 @@
 <div class="home__container">
-	<app-card *ngFor="let game of currentPageResults"
-		gameThumb="{{game.thumbnail}}"
-		gamePlatform="{{game.platform}}"
-		gameTitle="{{game.title}}"
-		gameGenre="{{game.genre}}"
-	>
-	</app-card>
 	
-</div>
+	<app-card *ngFor="let game of currentPageResults" 
+		gameThumb="{{game.thumbnail}}" 
+		gamePlatform="{{game.platform}}"
+		gameTitle="{{game.title}}" 
+		gameGenre="{{game.genre}}">
+	</app-card>
 
+
+	<div class="pagination__container">
+
+		<app-pagination-button *ngIf="currentPage > 1" label="Voltar" [pageNumber]="currentPage - 1"
+			(pageChanged)="loadPage($event)" class="pagination-button previous-button">
+			Anterior
+		</app-pagination-button>
+
+		<app-pagination-button label="Avançar" *ngIf="currentPage < totalPages" [pageNumber]="currentPage + 1"
+			(pageChanged)="loadPage($event)" class="pagination-button next-button">
+			Próximo
+		</app-pagination-button>
+		<div class="pagination-info">
+			Página {{ currentPage }} de {{ totalPages }}
+		</div>
+	</div>
+
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, map, range, toArray } from 'rxjs';
 import { GameData } from 'src/app/models/gameData';
 import { GamesService } from 'src/app/services/games.service';
 
@@ -10,8 +11,12 @@ import { GamesService } from 'src/app/services/games.service';
 export class HomeComponent implements OnInit {
   itemsPerPage: number = 5;
   currentPage: number = 1;
-
+  totalGames: number = 0;
+  totalPages: number = 0;
+  teste:string = "vai";
   currentPageResults: GameData[] = [];
+
+
   constructor(
     private gameService: GamesService
   ) { }
@@ -19,17 +24,32 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.gameService.getAllGames();
     this.gameService.onApiCallComplete().subscribe(() => {
-     this.loadPage(1);
+      this.loadPage(1);
     });
   }
 
   loadPage(pageNumber: number): GameData[] {
     const startIndex = (pageNumber - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    this.currentPageResults = this.gameService.getAllResults().slice(startIndex, endIndex);
+    const result = this.gameService.getAllResults()
+    this.totalGames = result.length;
+    this.currentPageResults = result.slice(startIndex, endIndex);
     this.currentPage = pageNumber;
-    console.log(this.currentPageResults)
+    console.log(this.totalGames)
+    this.totalPages = Math.ceil(this.totalGames / this.itemsPerPage);
     return this.currentPageResults;
   }
+  getPageNumbers(): Observable<number[]> {
+    const totalPages = Math.ceil(this.totalGames / this.itemsPerPage);
+    const currentPage = this.currentPage;
+    const itemsToShow = 5; // Quantidade de páginas a serem mostradas
 
+    let startPage = Math.max(1, currentPage - itemsToShow);
+    let endPage = Math.min(totalPages, currentPage + itemsToShow);
+
+    return range(startPage, endPage - startPage + 1).pipe(
+      toArray() // Converta o Observable em um array
+    );
+  }
 }
+
