@@ -1,0 +1,21 @@
+:host {
+    background-color: #007BFF;
+    margin-right: 10px; 
+    padding: 10px 10px; 
+    width: 100px;
+    height: 30px; 
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+
+  }
+
+  .pagination-button-large{
+
+    cursor: pointer; 
+    pointer-events: auto;
+  }

@@ -8,3 +8,24 @@
 	align-items: baseline;
 	flex-wrap: wrap;
 }
+
+.pagination__container{
+	position: absolute;
+	bottom: 300px;
+	display: flex;
+	justify-content: center;
+}
+
+.previous-button {
+	justify-content: flex-start;
+  }
+  
+  .next-button {
+	justify-content: flex-end;
+  }
+
+  .pagination-button {
+	text-align: center;
+	display: flex;
+	align-items: center;
+  }

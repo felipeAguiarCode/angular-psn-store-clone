@@ -1,31 +1,28 @@
 <div class="home__container">
-	<app-card
-		gameCover="assets/bt-1.jpg"
-		gameLabel="DIGITAL"
-		gameType="DIGITAL | PS4"
-		gamePrice="R$ 129,99"
-	>
+	<app-pagination-button *ngIf="currentPage > 1" label="Voltar" [pageNumber]="currentPage - 1"
+		(pageChanged)="loadPage($event)" class="pagination-button previous-button">
+		Anterior
+	</app-pagination-button>
+	<app-card *ngFor="let game of currentPageResults" 
+		gameId="{{game.id}}"
+		gameThumb="{{game.thumbnail}}" 
+		gamePlatform="{{game.platform}}"
+		gameTitle="{{game.title}}" 
+		gameGenre="{{game.genre}}">
 	</app-card>
-	<app-card
-		gameCover="assets/bt-4.jpg"
-		gameLabel="EXCLUSIVE"
-		gameType="DISC | PS5"
-		gamePrice="R$ 269,99"
-	>
-	</app-card>
-	<app-card
-		gameCover="assets/ac-cover.jpg"
-		gameLabel="BEST OF YEAR"
-		gameType="DIGITAL | PS5"
-		gamePrice="R$ 369,99"
-		>
-	</app-card>
-	<app-card
-		gameCover="assets/bt-hardline.jpg"
-		gameLabel="NEW"
-		gameType="DIGITAL | PS3 PS4 PS5"
-		gamePrice="R$ 369,99"
-	>
-	</app-card>
-</div>
+	<app-pagination-button label="Avançar" *ngIf="currentPage < totalPages" [pageNumber]="currentPage + 1"
+			(pageChanged)="loadPage($event)" class="pagination-button next-button">
+			Próximo
+		</app-pagination-button>
 
+	<div class="pagination__container">
+
+	
+
+	
+		<div class="pagination-info">
+			Página {{ currentPage }} de {{ totalPages }}
+		</div>
+	</div>
+
+</div>

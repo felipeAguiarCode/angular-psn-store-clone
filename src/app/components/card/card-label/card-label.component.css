@@ -15,4 +15,17 @@
 	font-weight: bold;
 	height: 40px;
 	padding: 0px 50px;
+	animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar{
+	0% {
+        transform: scale(1); 
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1); 
+      }
 }

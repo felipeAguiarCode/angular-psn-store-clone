@@ -1,9 +1,10 @@
 .card__container{
+	background-color: rgba(0, 0, 0, 0.589);
 	position: relative;
 	border:3px solid #3E4357;
 	border-radius: 10px;
 	width: 350px;
-	height: 500px;
+	height: 400px;
 
 	display: flex;
 	overflow: hidden;
@@ -11,8 +12,9 @@
 }
 
 .card__img{
-	min-width: 100%;
-	min-height: 100%;
+	width: 100%;
+	height: 100%; 
+	object-fit: contain; 
 	transition: transform .8s;
 }
 
