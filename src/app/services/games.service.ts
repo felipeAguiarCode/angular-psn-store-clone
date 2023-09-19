@@ -16,8 +16,8 @@ export class GamesService {
   private apiCallCompleteSubject = new Subject<void>();
   private httpOptions = {
     headers: new HttpHeaders({
-      'X-RapidAPI-Key': 'f7MoMGUbuLmshKEI4caExePt4aCAp1SID4EjsnX57i85joFPfh',
-      'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+      'X-RapidAPI-Key': environment.apiKey,
+      'X-RapidAPI-Host': environment.apiHost
     })
   };
   constructor(

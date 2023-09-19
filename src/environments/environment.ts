@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  freeGameApi:'https://free-to-play-games-database.p.rapidapi.com/api/games'
+  freeGameApi:'https://free-to-play-games-database.p.rapidapi.com/api/games',
+  apiKey:'f7MoMGUbuLmshKEI4caExePt4aCAp1SID4EjsnX57i85joFPfh',
+  apiHost:'free-to-play-games-database.p.rapidapi.com'
 };
 
 /*
