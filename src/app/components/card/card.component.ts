@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../data/dataFake';
+import { GameService } from 'src/app/service/game.service';
 
 @Component({
   selector: 'app-card',
@@ -12,13 +15,25 @@ export class CardComponent implements OnInit {
 	@Input()
 	gameLabel:string=""
 	@Input()
-	gameType:string ="XPTO | PS4"
+	gameType:string =""
 	@Input()
-	gamePrice:string = "R$ 399,90"
+	gamePrice:string = ""
+	@Input()
+	id:string = ""
 
-  constructor() { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
+    this.setValuesToComponent(this.id)
   }
 
+  setValuesToComponent(id: string | null){
+		const response = this.gameService.getGameById(id)
+		if (!response) return
+
+		this.gameCover = response.gameCover
+		this.gameLabel = response.gameLabel
+		this.gameType = response.gameType
+		this.gamePrice = response.gamePrice
+  }
 }
