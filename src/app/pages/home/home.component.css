@@ -1,4 +1,4 @@
-.home__container{
+.home__container {
 	width: 90%;
 	margin: auto;
 	padding-top: 50px;
@@ -7,4 +7,5 @@
 	justify-content: space-around;
 	align-items: baseline;
 	flex-wrap: wrap;
+	height: 100vh; /* Ajusta a altura para 100% da altura da tela */
 }
