@@ -1,0 +1,89 @@
+﻿node : Node.js version 
+v25.7.0 detected.
+No linha:1 caractere:1
++ node node_modules/@an
+gular/cli/bin/ng.js 
+build 2>&1 | 
+Select-Object - ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Node.js versi   
+ on v25.7.0 detecte    
+d.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Odd numbered Node.js 
+versions will not 
+enter LTS status and 
+should not be used for 
+production. For more 
+information, please 
+see https://nodejs.org/
+en/about/previous-relea
+ses/.
+- Generating browser 
+application bundles 
+(phase: setup)...
+[1m[33m    
+TypeScript compiler 
+options "target" and "u
+seDefineForClassFields"
+ are set to "ES2022" 
+and "false" 
+respectively by the 
+Angular CLI. To 
+control ECMA version 
+and features use the 
+Browserslist 
+configuration. For 
+more information, see h
+ttps://angular.dev/tool
+s/cli/build#configuring
+-browser-compatibility
+    NOTE: You can set 
+the "target" to 
+"ES2022" in the 
+project's tsconfig to 
+remove this 
+warning.[39m[22m
+[32mÔ£ö[39m Browser 
+application bundle 
+generation complete.
+[32mÔ£ö[39m Browser 
+application bundle 
+generation complete.
+[1m[31m
+./src/main.ts - Error: 
+Module build failed 
+(from ./node_modules/@n
+gtools/webpack/src/ivy/
+index.js):
+Error: Emit attempted 
+before Angular Webpack 
+plugin initialization.
+
+./src/polyfills.ts - 
+Error: Module build 
+failed (from ./node_mod
+ules/@ngtools/webpack/s
+rc/ivy/index.js):
+Error: Emit attempted 
+before Angular Webpack 
+plugin initialization.
+
+Error: Failed to 
+initialize Angular 
+compilation - The 
+Angular Compiler 
+requires TypeScript 
+>=5.9.0 and <6.1.0 but 
+5.7.3 was found 
+instead.
+
+[39m[22m

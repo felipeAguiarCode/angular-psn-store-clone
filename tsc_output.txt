@@ -1,0 +1,5 @@
+﻿node_modules/@angular/core/types/_discovery-chunk.d.ts(12,86): error TS2307: Cannot find module '@angular/core/primitives/di' or its corresponding type declarations.
+  There are types at 'C:/Users/kogli/OneDrive/├ürea de Trabalho/Projetos/angular-psn-store-clone/node_modules/@angular/core/types/primitives-di.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@angular/platform-browser/types/platform-browser.d.ts(10,42): error TS2307: Cannot find module '@angular/common/http' or its corresponding type declarations.
+  There are types at 'C:/Users/kogli/OneDrive/├ürea de Trabalho/Projetos/angular-psn-store-clone/node_modules/@angular/common/types/http.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/@angular/router/types/router.d.ts(145,17): error TS2552: Cannot find name 'ViewTransition'. Did you mean 'ViewTransitionInfo'?

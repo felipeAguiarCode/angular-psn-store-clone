@@ -1,21 +1,18 @@
-.card__container{
-	position: relative;
-	border:3px solid #3E4357;
-	border-radius: 10px;
-	width: 350px;
-	height: 500px;
-
-	display: flex;
-	overflow: hidden;
-	margin-top: 10px;
+.card-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card__img{
-	min-width: 100%;
-	min-height: 100%;
+.card-hover:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.card-img-custom {
+	min-height: 500px;
+	object-fit: cover;
 	transition: transform .8s;
 }
 
-.card__img:hover{
-	transform: scale(1.1);
+.card-hover:hover .card-img-custom {
+	transform: scale(1.05);
 }

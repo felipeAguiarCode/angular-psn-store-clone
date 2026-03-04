@@ -1,0 +1,144 @@
+﻿node : Node.js version 
+v25.7.0 detected.
+No linha:1 caractere:1
++ node node_modules/@an
+gular/cli/bin/ng.js 
+build 2>&1 | 
+Select-Object - ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Node.js versi   
+ on v25.7.0 detecte    
+d.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Odd numbered Node.js 
+versions will not 
+enter LTS status and 
+should not be used for 
+production. For more 
+information, please 
+see https://nodejs.org/
+en/about/previous-relea
+ses/.
+[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+Application bundle generation failed. [1.826 seconds] - 2026-03-04T03:49:44.913Z
+
+[1m[33m[33mÔû▓ [43;
+33m[[43;30mWARNING[43
+;33m][0m 
+[1mTypeScript 
+compiler options 
+'target' and 'useDefine
+ForClassFields' are 
+set to 'ES2022' and 
+'false' respectively 
+by the Angular 
+CLI.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+tsconfig.app.json:0:0:
+[37m      0 Ôöé 
+[32m[37m
+        ÔòÁ [32m^[0m
+
+  To control ECMA 
+version and features 
+use the Browserslist 
+configuration. For 
+more information, see 
+[4mhttps://angular.dev/
+tools/cli/build#configu
+ring-browser-compatibil
+ity[0m
+
+
+[33mÔû▓ [43;33m[[43;
+30mWARNING[43;33m][0m
+ [1mTypeScript 
+compiler options 
+'target' and 'useDefine
+ForClassFields' are 
+set to 'ES2022' and 
+'false' respectively 
+by the Angular 
+CLI.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+tsconfig.app.json:0:0:
+[37m      0 Ôöé 
+[32m[37m
+        ÔòÁ [32m^[0m
+
+  To control ECMA 
+version and features 
+use the Browserslist 
+configuration. For 
+more information, see 
+[4mhttps://angular.dev/
+tools/cli/build#configu
+ring-browser-compatibil
+ity[0m
+
+[39m[22m
+[1m[31m[31mX [41;31
+m[[41;97mERROR[41;31m
+][0m [1mTS2307: 
+Cannot find module '@an
+gular/core/primitives/d
+i' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    node_modules/@angul
+ar/core/types/_discover
+y-chunk.d.ts:12:85:
+[37m      12 Ôöé ...s 
+InjectionToken$1, 
+NotFound } from [32m'@
+angular/core/primitives
+/di'[37m;
+         ÔòÁ           
+                       
+      [32m~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97
+mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module 
+'@angular/common/http' 
+or its corresponding 
+type declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    node_modules/@angul
+ar/platform-browser/typ
+es/platform-browser.d.t
+s:10:41:
+[37m      10 Ôöé 
+import { HttpTransferCa
+cheOptions } from [32m
+'@angular/common/http'
+[37m;
+         ÔòÁ           
+                       
+        [32m~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+[39m[22m

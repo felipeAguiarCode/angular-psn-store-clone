@@ -1,0 +1,111 @@
+﻿node : Node.js version 
+v25.7.0 detected.
+No linha:1 caractere:1
++ node node_modules/@an
+gular/cli/bin/ng.js 
+build 2>&1 | 
+Select-Object - ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Node.js versi   
+ on v25.7.0 detecte    
+d.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Odd numbered Node.js 
+versions will not 
+enter LTS status and 
+should not be used for 
+production. For more 
+information, please 
+see https://nodejs.org/
+en/about/previous-relea
+ses/.
+- Generating browser 
+application bundles 
+(phase: setup)...
+[1m[33m    
+TypeScript compiler 
+options "target" and "u
+seDefineForClassFields"
+ are set to "ES2022" 
+and "false" 
+respectively by the 
+Angular CLI. To 
+control ECMA version 
+and features use the 
+Browserslist 
+configuration. For 
+more information, see h
+ttps://angular.dev/tool
+s/cli/build#configuring
+-browser-compatibility
+    NOTE: You can set 
+the "target" to 
+"ES2022" in the 
+project's tsconfig to 
+remove this 
+warning.[39m[22m
+[32mÔ£ö[39m Browser 
+application bundle 
+generation complete.
+[32mÔ£ö[39m Browser 
+application bundle 
+generation complete.
+[1m[31m
+Error: [96mnode_module
+s/@angular/core/types/_
+discovery-chunk.d.ts[0
+m:[93m12[0m:[93m86[
+0m - 
+[91merror[0m[90m 
+TS2307: [0mCannot 
+find module '@angular/c
+ore/primitives/di' or 
+its corresponding type 
+declarations.
+
+[7m12[0m import { 
+Injector as 
+Injector$1, 
+InjectionToken as 
+InjectionToken$1, 
+NotFound } from '@angul
+ar/core/primitives/di';
+[7m  [0m [91m       
+                       
+                       
+                       
+         ~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~[0m
+
+
+Error: [96mnode_module
+s/@angular/platform-bro
+wser/types/platform-bro
+wser.d.ts[0m:[93m10[
+0m:[93m42[0m - 
+[91merror[0m[90m 
+TS2307: [0mCannot 
+find module 
+'@angular/common/http' 
+or its corresponding 
+type declarations.
+
+[7m10[0m import { Htt
+pTransferCacheOptions 
+} from 
+'@angular/common/http';
+[7m  [0m [91m       
+                       
+           ~~~~~~~~~~~~
+~~~~~~~~~~[0m
+
+
+[39m[22m

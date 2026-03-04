@@ -1,17 +1,6 @@
-<a href="#" class="card__container">
-	<img
-		class="card__img"
-		[src]=[gameCover]
-		alt=""
-		srcset=""
-	>
-	<app-card-label
-		gameLabel="{{gameLabel}}"
-	>
-	</app-card-label>
-	<app-card-pricing
-		gameType="{{gameType}}"
-		gamePrice="{{gamePrice}}"
-	>
-	</app-card-pricing>
+<a href="#"
+	class="card border-0 shadow-sm text-decoration-none card-hover position-relative bg-dark text-white rounded-4 overflow-hidden">
+	<img [src]="gameCover" class="card-img-top card-img-custom" alt="game cover">
+	<app-card-label [gameLabel]="gameLabel"></app-card-label>
+	<app-card-pricing [gameType]="gameType" [gamePrice]="gamePrice"></app-card-pricing>
 </a>
