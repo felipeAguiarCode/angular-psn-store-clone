@@ -1,21 +1,70 @@
-.card__container{
+.card__container {
 	position: relative;
-	border:3px solid #3E4357;
-	border-radius: 10px;
-	width: 350px;
-	height: 500px;
-
 	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
 	overflow: hidden;
-	margin-top: 10px;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	cursor: pointer;
 }
 
-.card__img{
-	min-width: 100%;
-	min-height: 100%;
-	transition: transform .8s;
+.card__container:hover {
+	transform: translateY(-10px) scale(1.02);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 67, 156, 0.3);
+	border-color: var(--ps-neon);
 }
 
-.card__img:hover{
+.card__img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	transition: transform 0.6s ease;
+}
+
+.card__container:hover .card__img {
 	transform: scale(1.1);
+}
+
+.card__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(2, 2, 5, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 10;
+}
+
+.card__container:hover .card__overlay {
+	opacity: 1;
+}
+
+.btn-buy {
+	background: var(--ps-neon);
+	color: white;
+	padding: 12px 24px;
+	border-radius: 30px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	transform: translateY(20px);
+	transition: all 0.4s ease;
+	box-shadow: 0 10px 20px rgba(0, 114, 206, 0.4);
+}
+
+.card__container:hover .btn-buy {
+	transform: translateY(0);
+}
+
+.btn-buy:hover {
+	background: #0088ff;
+	transform: scale(1.05);
 }

@@ -1,18 +1,18 @@
-.card-label__container{
+.card-label__container {
 	position: absolute;
-	bottom:90px;
-	right: 0;
+	bottom: 100px;
+	left: 0;
+	z-index: 15;
 }
 
-.card-label__content{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #0d0d0d;
+.card-label__content {
+	background: var(--ps-neon);
 	color: white;
-	font-size: 12px;
-	font-family: 'Segoe UI';
-	font-weight: bold;
-	height: 40px;
-	padding: 0px 50px;
+	padding: 5px 25px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }

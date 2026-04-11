@@ -1,31 +1,46 @@
-<div class="home__container">
-	<app-card
-		gameCover="assets/bt-1.jpg"
-		gameLabel="DIGITAL"
-		gameType="DIGITAL | PS4"
-		gamePrice="R$ 129,99"
-	>
-	</app-card>
-	<app-card
-		gameCover="assets/bt-4.jpg"
-		gameLabel="EXCLUSIVE"
-		gameType="DISC | PS5"
-		gamePrice="R$ 269,99"
-	>
-	</app-card>
-	<app-card
-		gameCover="assets/ac-cover.jpg"
-		gameLabel="BEST OF YEAR"
-		gameType="DIGITAL | PS5"
-		gamePrice="R$ 369,99"
+<div class="home__container fade-in">
+	<!-- Hero Highlight Section -->
+	<section class="home__hero glass">
+		<div class="hero__content">
+			<span class="hero__label">{{ heroGame.label }}</span>
+			<h1 class="hero__title">{{ heroGame.title }}</h1>
+			<p class="hero__description">Experience the epic continuation of Kratos and Atreus' journey. Master the elements and face the Norse gods.</p>
+			<div class="hero__actions">
+				<button class="btn btn-primary">Pre-order Now</button>
+				<button class="btn btn-secondary">Learn More</button>
+			</div>
+		</div>
+		<div class="hero__image">
+			<img [src]="heroGame.cover" [alt]="heroGame.title">
+		</div>
+	</section>
+
+	<!-- Filters Section -->
+	<nav class="home__filters">
+		<button 
+			[class.active]="selectedCategory === 'All'" 
+			(click)="filterByCategory('All')">All Games</button>
+		<button 
+			[class.active]="selectedCategory === 'PS5'" 
+			(click)="filterByCategory('PS5')">PS5</button>
+		<button 
+			[class.active]="selectedCategory === 'PS4'" 
+			(click)="filterByCategory('PS4')">PS4</button>
+		<button 
+			[class.active]="selectedCategory === 'Exclusive'" 
+			(click)="filterByCategory('Exclusive')">Exclusives</button>
+	</nav>
+
+	<!-- Game Grid -->
+	<main class="home__grid">
+		<app-card
+			*ngFor="let game of filteredGames"
+			[gameCover]="game.cover"
+			[gameLabel]="game.label"
+			[gameType]="game.type"
+			[gamePrice]="game.price"
 		>
-	</app-card>
-	<app-card
-		gameCover="assets/bt-hardline.jpg"
-		gameLabel="NEW"
-		gameType="DIGITAL | PS3 PS4 PS5"
-		gamePrice="R$ 369,99"
-	>
-	</app-card>
+		</app-card>
+	</main>
 </div>
 

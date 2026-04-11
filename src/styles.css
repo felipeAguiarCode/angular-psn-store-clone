@@ -1,12 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+	--ps-blue: #00439c;
+	--ps-neon: #0072ce;
+	--ps-deep: #020205;
+	--ps-glass: rgba(255, 255, 255, 0.05);
+	--ps-glass-border: rgba(255, 255, 255, 0.1);
+	--font-main: 'Outfit', sans-serif;
+}
+
 *{
 	padding: 0;
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
+	font-family: var(--font-main);
 }
 
 body{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(9,9,121,1) 100%);
+	background: radial-gradient(circle at top right, #001f3f 0%, #020205 60%);
+	background-attachment: fixed;
+	color: #ffffff;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Glassmorphism Helper */
+.glass {
+	background: var(--ps-glass);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--ps-glass-border);
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+	animation: fadeIn 0.8s ease forwards;
 }
