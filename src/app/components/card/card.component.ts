@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-card',
@@ -16,9 +17,15 @@ export class CardComponent implements OnInit {
 	@Input()
 	gamePrice:string = "R$ 399,90"
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+  }
+
+  buyGame(event: Event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.cartService.addToCart();
   }
 
 }

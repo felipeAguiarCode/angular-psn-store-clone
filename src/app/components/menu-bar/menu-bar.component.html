@@ -1,18 +1,34 @@
-<div class="menu-bar__container">
+<div class="menu-bar__container glass">
 	<div class="menu-bar__logo">
 		<img
 			src="assets/ps-logo.png"
-			alt="playstation logo"
-			srcset=""
+			alt="PlayStation Logo"
 			width="140px"
 			height="32px"
 		>
 	</div>
+
+	<div class="menu-bar__search">
+		<input type="text" placeholder="Search games, add-ons and more..." class="search-input">
+		<i class="search-icon"></i>
+	</div>
+
 	<div class="menu-bar__item">
 		<ul>
-			<li><a href="#">YOUTUBE</a></li>
-			<li><a href="#">LINKEDIN</a></li>
-			<li><a href="#">GITHUB</a></li>
+			<li><a href="https://vitorisaias.github.io/">LINKEDIN</a></li>
+			<li><a href="https://vitorisaias.github.io/">GITHUB</a></li>
+			<li><a href="https://vitorisaias.github.io/">YOUTUBE</a></li>
 		</ul>
+	</div>
+
+	<div class="menu-bar__cart">
+		<div class="cart-icon-wrapper">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+			<span class="cart-badge" *ngIf="(cartCount$ | async) !== 0">{{ cartCount$ | async }}</span>
+		</div>
 	</div>
 </div>
